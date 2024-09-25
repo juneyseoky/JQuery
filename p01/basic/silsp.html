@@ -10,6 +10,7 @@
 <body>
     <div id="wrap">
         <h1>가나다</h1>
+        <button>버튼</button>
     </div>
 
     <!-- 제이쿼리 시작 제이쿼리 API 추가-->
@@ -17,6 +18,16 @@
     <script>
         $(() => {
             $("h1").css({ "color": "red" });
+            $("button").css({
+                "font-size": "24px",
+                "cursor": "pointer",
+                "color": "royalblue"
+            });
+            $("button").click(
+                function () {
+                    $("h1").css({ color: "blue" });
+                }
+            )
 
         })
     </script>

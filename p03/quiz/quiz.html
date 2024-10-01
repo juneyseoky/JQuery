@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#wrap {
+            width: 350px;
+            padding: 20px 30px;
+            border: 1px solid #000;
+        }
+
+        div#menuArea>ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0 30px;
+        }
+
+        li {
+            padding: 0 15px;
+        }
+
+        #menuArea>ul>li:not(:last-child) {
+            border-right: 1px solid #000;
+
+        }
+
+        li:hover {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>GNB</h1>
+        <hr>
+        <div id="menuArea">
+            <ul>
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+                <li>메뉴4</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            let clicked;
+            $("li").click(function () {
+                console.log($(this));
+                if (clicked) {
+                    clicked.css("font-weight", "normal");
+                } else {
+                    clicked = $(this);
+                }
+            });
+            $("li").hover(
+                function () {
+                    if (!clicked || clicked != $(this)) {
+                        $(this).css("font-weight", "bold");
+                    }
+                    $(this).click(function () {
+                        clicked = $(this);
+                    });
+                    // $("li").css("font-weight", "normal")
+                    // }
+                },
+                function () {
+                    console.log(clicked);
+                    if (!clicked) {
+                        $("li").css("font-weight", "normal")
+                    } else if (clicked || clicked == $(this)) {
+                        $("li").css("font-weight", "normal")
+                        $(clicked).css("font-weight", "bold")
+                    } else {
+                        $(clicked).css("font-weight", "bold")
+                    }
+                    //     $(this).css("font-weight", "bold")
+                    // } else {
+                    // }
+                }
+            )
+
+        });
+    </script>
+</body>
+
+</html>

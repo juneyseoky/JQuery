@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="licenseAllCheckBox">
+            <input type="checkbox" id="checkAll">
+            <span>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</span>
+        </div>
+        <div id="useLicenseArea">
+            <h3>[필수] 이용약관 동의</h3>
+            <div class="licenseArea">
+                <iframe src="dat/이용약관동의.txt" frameborder="0"></iframe>
+            </div>
+            <div class="checkArea">
+                <span>이용약관에 동의하십니까?</span>
+                <input type="checkbox" class="useLicense chkReq">
+                <span>동의함(필수)</span>
+            </div>
+        </div>
+        <div id="personData">
+            <h3>[필수]개인정보 수집 및 이용 동의</h3>
+            <div class="licenseArea">
+                <iframe src="dat/개인정보 수집 및 이용동의.txt" frameborder="0"></iframe>
+            </div>
+            <div class="checkArea">
+                <span>개인정보 수집 및 이용에 동의하십니까?</span>
+                <input type="checkbox" class="useLicense chkReq">
+                <span>동의함(필수)</span>
+            </div>
+        </div>
+        <div id="shopingIn">
+            <h3>[선택] 쇼핑정보 수신 동의</h3>
+            <div class="licenseArea">
+                <iframe src="dat/쇼핑정보 선택동의.txt" frameborder="0"></iframe>
+            </div>
+            <div class="checkArea">
+                <span>개인정보 수집 및 이용에 동의하십니까?</span>
+                <input type="checkbox" class="useLicense">
+                <span>동의함(선택)</span>
+            </div>
+        </div>
+        <div id="bnt">
+            <button>회원가입</button>
+        </div>
+        <script src="script/jquery-3.7.1.min.js"></script>
+        <script src="script/script.js"></script>
+</body>
+
+</html>

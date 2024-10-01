@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div>테두리선 내부를 클릭하세요</div>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script>
+        $("div").mousedown(function () {
+            let txt = "<br>Mouse button pressed: ";
+            txt += event.which;
+            $("div").append(txt);
+        });
+    </script>
+</body>
+
+</html>

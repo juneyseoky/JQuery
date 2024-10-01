@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 속성 관련 메서드</title>
+    <style>
+        span {
+            font-size: 20px;
+
+        }
+
+        input {
+            width: 20px;
+            height: 20px;
+            transform: translateY(3px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1Tag">HTML 속성 관련 메서드</h1>
+    <span>선택1</span> <input type="checkbox" value="레몬"><br>
+    <span>선택2</span> <input type="checkbox" value="딸기">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // $("h1").attr("id", "sample");
+            // alert(
+            //     $("h1").attr("id")
+            // );
+
+            $("input[type=checkbox]:eq(1)").attr("checked", "checked");
+            // attr("checked") : checked  => 체크가 안되어있어도
+            $("input[type=checkbox]:eq(0)").prop("checked", true);
+            // prop("checked") : true , prop("checked") : false
+
+            // prop() : 값을 가져오기 위해서 사용함.
+
+            // 제이쿼리에서 html 태그의 속성을 제어하는 메서드
+            // 1. attr() : <input type="checkbox"> 를 제외한 
+            //             모든 태그에 사용 가능
+            //    └> jQuery로 <input type="checkbox"> 태그에 체크여부
+            //       적응은 정상 실행됨.
+            //       <input type="checkbox"> 태그의 체크여부를  jQuery로
+            //       반환할때는 "checked" 값만 반환되므로 사용불가
+            //
+            // 2. prop() : <input type="checkbox">에만 사용하는 메서드
+            //     └> <input type="checkbox"> 태그의 체크여부를  
+            //        jQuery로 반환할때 true/false 값이 반환되어 사용가능
+        })
+    </script>
+</body>
+
+</html>

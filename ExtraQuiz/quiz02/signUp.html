@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="style/signUp_style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>회원가입</h1>
+        <hr>
+        <form>
+            <div class="inputArea">
+                <label>
+                    <span class="formTxt">아이디</span>
+                    <input type="text" id="userId" class="essential" maxlength=" 20" autofocus>
+                </label>
+                <button onclick="accountChkOpen(userId.value)">중복확인</button>
+            </div>
+            <hr style="height: 0px;">
+            <div class="inputArea">
+                <label><span class="formTxt">비밀번호</span>
+                    <input type="password" id="pass" class="essential" maxlength=" 20" onblur="passVali()">
+                </label>
+                <span id="passRes"></span>
+            </div>
+            <hr>
+            <div class="inputArea">
+                <label><span>비밀번호 확인</span>
+                    <input type="password" id="passChk" onblur="checkPass()" maxlength="20">
+                </label>
+                <span id="chkRes"></span>
+            </div>
+            <hr>
+            <div class="inputArea">
+                <label><span class="formTxt">이메일</span>
+                    <input type="text" id="emailId" class="essential" onblur=" emailVali(this.value)">
+                </label>
+                <span>&nbsp;@&nbsp;</span>
+                <input type="text" id="emailDomain" class="essential">
+                <select id="domain" onchange="emailAdd()">
+                    <option value="">직접입력</option>
+                    <option>naver.com</option>
+                    <option>daum.net</option>
+                </select>
+            </div>
+            <hr>
+            <div id="btnArea">
+                <button type="reset">가입취소</button>
+                <button type="button" id="sub">회원가입</button>
+            </div>
+        </form>
+
+    </div>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script src="script/signUp_script.js"></script>
+</body>
+
+</html>

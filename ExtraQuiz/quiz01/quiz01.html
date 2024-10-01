@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        div#wrap {
+            width: 300px;
+            border: 2px solid #aaa;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        div#paging {
+            display: flex;
+            justify-content: center;
+        }
+
+        div#leftBnt,
+        div#rightBnt {
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            font-size: 25px;
+        }
+
+        span {
+            font-size: 25px;
+            border: 2px solid #08f;
+            padding: 2px 10px;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>요소이동</h1>
+        <hr>
+        <div id="paging">
+            <div id="leftBnt">&lt;</div>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <div id="rightBnt">&gt;</div>
+        </div>
+    </div>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            $("div#leftBnt").click(function () {
+                $("span:nth-child(2)").insertAfter("span:nth-child(4)");
+            })
+            $("div#rightBnt").click(function () {
+                $("span:nth-child(4)").insertBefore("span:nth-child(2)");
+            })
+        })
+    </script>
+</body>
+
+</html>

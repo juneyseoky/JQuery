@@ -44,7 +44,7 @@ ul#mainMenu>li>ul.subMenu {
   top: 42px;
   /* margin-top: 10px; */
 
-  display: none;
+  /* display: none; */
 }
 
 ul#mainMenu li.subLi {

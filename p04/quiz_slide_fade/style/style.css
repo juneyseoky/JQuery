@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import url(style_Reset.css);
+
+div#wrap {
+    width: 1030px;
+    padding: 10px;
+    border: 4px solid #aaa;
+    border-radius: 4px;
+    margin: 10px auto;
+}
+
+#slideshowArea {
+    overflow: hidden;
+    width: 1000px;
+    height: 420px;
+}
+
+
+#slideFrame {
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+}
+
+
+#slideFrame>a {
+    width: 1000px;
+    height: 350px;
+    /* display: inline-block; */
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+}
+
+a:not(:first-child) {
+    display: none;
+}
+
+span.msg {
+    padding: 30px;
+    opacity: 0.5;
+    background-color: #fff;
+    border-radius: 8px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}

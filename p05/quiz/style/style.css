@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import url(style_Reset.css);
+
+/* div#wrap {
+    width: 640px;
+    padding: 10px;
+    border: 4px solid #aaa;
+    border-radius: 4px;
+    margin: 10px auto;
+} */
+
+div#wrap>* {
+    /* border: 1px solid #08f; */
+    margin: 20px;
+    padding: 10px;
+}

@@ -4,7 +4,7 @@
 /*///////////////////////// CSS 리셋 파일 시작 /////////////////////////*/
 
 * {
-  color: #222; /* 기본 글 색상 */
+  color: #4a4948; /* 기본 글 색상 */
   font-family: "Nanum Gothic", sans-serif; /* 나눔고딕체 적용  */
   text-decoration: none; /* 밑줄 제거  */
   padding: 0;

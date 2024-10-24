@@ -11,5 +11,6 @@ $(function () {
             }
         );
     }
+    
     setInterval(sildeShow, 3000);
 })
